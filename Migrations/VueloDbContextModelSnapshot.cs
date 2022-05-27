@@ -150,9 +150,9 @@ namespace PruebaTecnica.Migrations
                         .IsRequired()
                         .HasColumnType("int");
 
-                    b.Property<string>("Fecha")
+                    b.Property<DateTime?>("Fecha")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("HoraLlegada")
                         .IsRequired()

@@ -12,7 +12,7 @@ using vuelo.Data;
 namespace PruebaTecnica.Migrations
 {
     [DbContext(typeof(VueloDbContext))]
-    [Migration("20220525045934_InitialCreate")]
+    [Migration("20220526141324_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -152,9 +152,9 @@ namespace PruebaTecnica.Migrations
                         .IsRequired()
                         .HasColumnType("int");
 
-                    b.Property<string>("Fecha")
+                    b.Property<DateTime?>("Fecha")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("HoraLlegada")
                         .IsRequired()

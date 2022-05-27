@@ -52,8 +52,8 @@ namespace vuelo.Controllers
                 NumeroVuelo = vueloInput.NumeroVuelo,
                 CiudadOrigenId = vueloInput.CiudadOrigenId,
                 CiudadDestinoId = vueloInput.CiudadDestinoId,
-                Fecha = DateTime.Parse(vueloInput.Fecha!).ToString(),
-            HoraSalida = vueloInput.HoraSalida!,
+                Fecha = vueloInput.Fecha,
+                HoraSalida = vueloInput.HoraSalida!,
                 HoraLlegada = vueloInput.HoraLlegada!,
                 AereolineaId = vueloInput.AereolineaId,
                 EstadoVueloId = vueloInput.EstadoVueloId

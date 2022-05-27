@@ -13,11 +13,8 @@ namespace vuelo.Models
         public int? CiudadDestinoId { get; set; }
 
         [Required(ErrorMessage = "La fecha de salida es requerida")]
-        [RegularExpression(@"^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$", 
-            ErrorMessage = "El formato debe ser de Fecha aaaa-mm-dd")]
         [ValidarFecha( ErrorMessage="La fecha debe ser mayor a la hoy")]
-
-        public string? Fecha { get; set; }
+        public DateTime? Fecha { get; set; }
 
         [Required(ErrorMessage = "La hora de salida es requerida")]
         [RegularExpression(@"([01]?[0-9]|2[0-3]):[0-5][0-9]$", 
